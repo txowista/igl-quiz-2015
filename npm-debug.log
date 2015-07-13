@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ 'C:\\Users\\igonzalez\\Downloads\\MIRIADAX\\mis_proyectos\\quiz',
+6 verbose install   [ 'express',
+6 verbose install     'body-parser',
+6 verbose install     'cookie-parser',
+6 verbose install     'morgan',
+6 verbose install     'serve-favicon',
+6 verbose install     'debug',
+6 verbose install     'ejs',
+6 verbose install     'express-partials' ] ]
+7 info preinstall quiz@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping express@~4.9.0 C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+10 verbose already installed skipping body-parser@~1.8.1 C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+11 verbose already installed skipping cookie-parser@~1.3.3 C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+12 verbose already installed skipping morgan@~1.3.0 C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+13 verbose already installed skipping serve-favicon@~2.1.3 C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+14 verbose already installed skipping debug@~2.0.0 C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+15 verbose already installed skipping ejs@~0.8.5 C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+16 verbose cache add [ 'express-partials@~2.1.3', null ]
+17 verbose cache add name=undefined spec="express-partials@~2.1.3" args=["express-partials@~2.1.3",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'express-partials@~2.1.3',
+18 verbose parsed url   path: 'express-partials@~2.1.3',
+18 verbose parsed url   href: 'express-partials@~2.1.3' }
+19 verbose cache add name="express-partials" spec="~2.1.3" args=["express-partials","~2.1.3"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '~2.1.3',
+20 verbose parsed url   path: '~2.1.3',
+20 verbose parsed url   href: '~2.1.3' }
+21 verbose addNamed [ 'express-partials', '~2.1.3' ]
+22 verbose addNamed [ null, '>=2.1.3-0 <2.2.0-0' ]
+23 silly lockFile b30c2d4d-express-partials-2-1-3 express-partials@~2.1.3
+24 verbose lock express-partials@~2.1.3 C:\Users\igonzalez\AppData\Roaming\npm-cache\b30c2d4d-express-partials-2-1-3.lock
+25 silly addNameRange { name: 'express-partials',
+25 silly addNameRange   range: '>=2.1.3-0 <2.2.0-0',
+25 silly addNameRange   hasData: false }
+26 verbose request where is /express-partials
+27 verbose request registry https://registry.npmjs.org/
+28 verbose request id 36335b7fd951ba34
+29 verbose url raw /express-partials
+30 verbose url resolving [ 'https://registry.npmjs.org/', './express-partials' ]
+31 verbose url resolved https://registry.npmjs.org/express-partials
+32 verbose request where is https://registry.npmjs.org/express-partials
+33 info trying registry request attempt 1 at 08:54:30
+34 verbose etag "80VJNZTLZSMAY89I4WATBDVJS"
+35 http GET https://registry.npmjs.org/express-partials
+36 http 304 https://registry.npmjs.org/express-partials
+37 silly registry.get cb [ 304,
+37 silly registry.get   { date: 'Fri, 10 Jul 2015 06:51:43 GMT',
+37 silly registry.get     via: '1.1 varnish',
+37 silly registry.get     'cache-control': 'max-age=60',
+37 silly registry.get     etag: '"80VJNZTLZSMAY89I4WATBDVJS"',
+37 silly registry.get     age: '0',
+37 silly registry.get     connection: 'keep-alive',
+37 silly registry.get     'x-served-by': 'cache-lcy1130-LCY',
+37 silly registry.get     'x-cache': 'MISS',
+37 silly registry.get     'x-cache-hits': '0',
+37 silly registry.get     'x-timer': 'S1436511103.445922,VS0,VE102',
+37 silly registry.get     vary: 'Accept' } ]
+38 verbose etag https://registry.npmjs.org/express-partials from cache
+39 silly addNameRange number 2 { name: 'express-partials',
+39 silly addNameRange   range: '>=2.1.3-0 <2.2.0-0',
+39 silly addNameRange   hasData: true }
+40 silly addNameRange versions [ 'express-partials',
+40 silly addNameRange   [ '0.0.1',
+40 silly addNameRange     '0.0.2',
+40 silly addNameRange     '0.0.3',
+40 silly addNameRange     '0.0.4',
+40 silly addNameRange     '0.0.5',
+40 silly addNameRange     '0.0.6',
+40 silly addNameRange     '0.1.0',
+40 silly addNameRange     '0.1.1',
+40 silly addNameRange     '0.2.0',
+40 silly addNameRange     '0.3.0' ] ]
+41 silly lockFile b30c2d4d-express-partials-2-1-3 express-partials@~2.1.3
+42 silly lockFile b30c2d4d-express-partials-2-1-3 express-partials@~2.1.3
+43 error notarget No compatible version found: express-partials@'>=2.1.3-0 <2.2.0-0'
+43 error notarget Valid install targets:
+43 error notarget ["0.0.1","0.0.2","0.0.3","0.0.4","0.0.5","0.0.6","0.1.0","0.1.1","0.2.0","0.3.0"]
+43 error notarget
+43 error notarget This is most likely not a problem with npm itself.
+43 error notarget In most cases you or one of your dependencies are requesting
+43 error notarget a package version that doesn't exist.
+44 error System Windows_NT 6.1.7601
+45 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+46 error cwd C:\Users\igonzalez\Downloads\MIRIADAX\mis_proyectos\quiz
+47 error node -v v0.10.32
+48 error npm -v 1.4.28
+49 error code ETARGET
+50 verbose exit [ 1, true ]
