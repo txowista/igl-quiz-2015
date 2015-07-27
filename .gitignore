@@ -1,4 +1,5 @@
 node_modules
+quiz/node_modules
 .DS_Store
 npm-debug.log
 *.iml
