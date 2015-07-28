@@ -43,7 +43,7 @@ exports.answer=function(req, res){
   res.render('quizes/answer', {quiz:req.quiz,respuesta: resultado,errors:[]});
 };
 exports.new=function(req,res){
-    var quiz=models.Quiz.buid(//crea objeto quiz
+    var quiz=models.Quiz.build(//crea objeto quiz
         {pregunta:"Pregunta",respuesta:"Respuesta"}
     );
     res.render('quizes/new', {quiz:quiz,errors:[]});
