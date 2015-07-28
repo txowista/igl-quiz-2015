@@ -13,7 +13,7 @@ exports.load= function(req,res,next,quizId){
 };
 //GET /author
 exports.author = function(req, res){
-    res.render('author', {autor: 'Igor Gonzalez'})
+    res.render('author', {autor: 'Igor Gonzalez',errors:[]})
 };
 exports.index = function(req, res){
     if(req.query.search) {
