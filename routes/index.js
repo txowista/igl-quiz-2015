@@ -1,4 +1,7 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 var router = express.Router();
 var quizController= require('../controllers/quiz_controller');
 
@@ -20,6 +23,6 @@ router.get('/quizes/search',               quizController.index);
 router.get('/quizes/new',                  quizController.new);
 router.post('/quizes/create',              quizController.create);
 router.get('/quizes/:quizId(\\d+)/edit',   quizController.edit);
-router.put('/quizes/:quizId(\\d+)',        quizController.update);
+router.put('/quizes/:quizId(\\d+)',  urlencodedParser,      quizController.update);
 router.delete('/quizes/:quizId(\\d+)',     quizController.destroy);
 module.exports = router;
