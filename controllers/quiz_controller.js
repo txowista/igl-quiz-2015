@@ -15,20 +15,23 @@ exports.load= function(req,res,next,quizId){
 exports.author = function(req, res){
     res.render('author', {autor: 'Igor Gonzalez',errors:[]})
 };
-exports.index = function(req, res){
-    if(req.query.search) {
-        var filtro = (req.query.search || '').replace(" ", "%");
-        models.Quiz.findAll({where:["pregunta like ?", '%'+filtro+'%'],order:'pregunta ASC'}).then(function(quizes){
-            res.render('quizes/index', {quizes: quizes});
-        }).catch(function(error) { next(error);});
+// GET /quizes
+exports.index = function(req, res) {
+    var filtro = '%';
+    var filtro_tema = '%';
+    if (req.query.search){
+        v_busqueda = '%' + req.query.search.replace(/\s/g,"%")  + '%';
+    };
+    if (req.query.search_tema){
+        v_busqueda_tema = '%' + req.query.search_tema.replace(/\s/g,"%")  + '%';
+    };
 
-    } else {
+    models.Quiz.findAll({where:["upper(pregunta) like upper(?) and upper(tema) like upper(?)", filtro, filtro_tema],order:'pregunta ASC'}).then(function(quizes) {
+        res.render('quizes/index.ejs',{quizes: quizes, errors: []});
+    }).catch(function(error){next(error);})
 
-        models.Quiz.findAll().then(function(quizes){
-            res.render('quizes/index', {quizes: quizes,errors:[]});
-        }).catch(function(error) { next(error);});
-    }
 };
+
 //GET /quizes/question
 exports.show=function(req, res) {
       res.render('quizes/show', {quiz: req.quiz,errors:[]});
@@ -78,7 +81,7 @@ exports.update = function(req, res) {
     res.end(JSON.stringify(req.body, null, 2));*/
     req.quiz.pregunta  = req.body.quiz.pregunta;
     req.quiz.respuesta = req.body.quiz.respuesta;
-
+    req.quiz.tema = req.body.quiz.tema;
     req.quiz
         .validate()
         .then(
