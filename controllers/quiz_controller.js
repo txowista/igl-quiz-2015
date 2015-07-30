@@ -27,7 +27,7 @@ exports.index = function(req, res) {
     };
 
     models.Quiz.findAll({where:["upper(pregunta) like upper(?) and upper(tema) like upper(?)", filtro, filtro_tema],order:'pregunta ASC'}).then(function(quizes) {
-        res.render('quizes/index.ejs',{quizes: quizes, errors: []});
+        res.render('quizes/index',{quizes: quizes, errors: []});
     }).catch(function(error){next(error);})
 
 };
@@ -54,6 +54,7 @@ exports.new=function(req,res){
 };
 exports.create=function(req,res){
     var quiz=models.Quiz.build(req.body.quiz);
+    console.log (quiz);
     quiz
         .validate()
         .then(
@@ -64,7 +65,7 @@ exports.create=function(req,res){
                 quiz //save:guarda en DB
                     .save({fields: ["pregunta", "respuesta", "tema"]})
                     .then(function () {
-                        res.direct('/quizes')
+                        res.redirect('/quizes')
                     })
             }
       }
